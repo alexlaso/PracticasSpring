@@ -1,0 +1,24 @@
+spring:
+  h2:
+    console.enabled: true
+    path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+values:
+  offset: 0
+  limit: 20
+  urlPokeAPI: "https://pokeapi.co/api/v2/pokemon/"
+  urlPokeAPIAlter: "https://pokeapi.co/api/v2/pokemon?limit={limit}&offset={offset}"
+  
+logging:
+  level:
+    root: DEBUG
+security:
+  based:
+    enabled: true
+    
